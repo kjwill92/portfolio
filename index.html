@@ -122,34 +122,34 @@
 									
 									<div class="slideshow-container">
 
-										<div class="mySlides fade">
+										<div class="mySlides1 fade">
 										  <div class="numbertext">1 / 3</div>
 										  <img src="./hilarybakes/Screen Shot 2018-11-13 at 9.12.11 AM.png" style="width:100%">
 										  <div class="textx">Home Page</div>
 										</div>
 										
-										<div class="mySlides fade">
+										<div class="mySlides1 fade">
 										  <div class="numbertext">2 / 3</div>
 										  <img src="./hilarybakes/Screen Shot 2018-11-13 at 9.12.35 AM.png" style="width:100%">
 										  <div class="textx">Request Page</div>
 										</div>
 										
-										<div class="mySlides fade">
+										<div class="mySlides1 fade">
 										  <div class="numbertext">3 / 3</div>
 										  <img src="./hilarybakes/Screen Shot 2018-11-13 at 9.13.20 AM.png" style="width:100%">
 										  <div class="textx">Add item to display</div>
 										</div>
 										
-										<a class="backwards" onclick="plusSlides(-1)">&#10094;</a>
-										<a class="forwards" onclick="plusSlides(1)">&#10095;</a>
+										<a class="backwards" onclick="firstPlusSlides(-1)">&#10094;</a>
+										<a class="forwards" onclick="firstPlusSlides(1)">&#10095;</a>
 										
 										</div>
 										<br>
 										
 										<div style="text-align:center">
-										  <span class="dot" onclick="currentSlide(1)"></span> 
-										  <span class="dot" onclick="currentSlide(2)"></span> 
-										  <span class="dot" onclick="currentSlide(3)"></span> 
+										  <span class="dot1" onclick="firstCurrentSlide(1)"></span> 
+										  <span class="dot1" onclick="firstCurrentSlide(2)"></span> 
+										  <span class="dot1" onclick="firstCurrentSlide(3)"></span> 
 										</div>
 										<br>
 									<h2>U-Tube - Group Project</h2>
@@ -165,52 +165,55 @@
 									<!-- ------ -->
 									<div class="slideshow-container1">
 
-										<div class="mySlides fade1">
+										<div class="mySlides2 fade1">
 											  <div class="numbertext1">1 / 6</div>
 											  <img src="./groupProject/Screen Shot 2018-12-13 at 12.53.40 PM.png" style="width:100%">
 											  <div class="textx1">Home Page</div>
 											</div>
 											
-											<div class="mySlides fade1">
+											<div class="mySlides2 fade1">
 											  <div class="numbertext1">2 / 6</div>
 											  <img src="./groupProject/Screen Shot 2018-12-13 at 12.53.26 PM.png" style="width:100%">
 											  <div class="textx1">Request Page</div>
 											</div>
 											
-											<div class="mySlides fade1">
+											<div class="mySlides2 fade">
 											  <div class="numbertext1">3 / 6</div>
 											  <img src="./groupProject/Screen Shot 2018-12-13 at 9.56.52 PM.png" style="width:100%">
 											  <div class="textx1">Add item to display</div>
 											</div>
 
-											<div class="mySlides fade1">
+											<div class="mySlides2 fade">
 												<div class="numbertext1">4 / 6</div>
 												<img src="./groupProject/Screen Shot 2018-12-13 at 9.57.10 PM.png" style="width:100%">
 												<div class="textx1">Add item to display</div>
 											</div>
 
-											<div class="mySlides fade1">
+											<div class="mySlides2 fade">
 												<div class="numbertext">5 / 6</div>
 												<img src="./groupProject/Screen Shot 2018-12-13 at 12.54.07 PM.png" style="width:100%">
 												<div class="textx1">Add item to display</div>
 											</div>
 
-											<div class="mySlides fade1">
+											<div class="mySlides2 fade">
 												<div class="numbertext1">6 / 6</div>
 												<img src="./groupProject/Screen Shot 2018-12-13 at 12.54.20 PM.png" style="width:100%">
 												<div class="textx1">Add item to display</div>
 											</div>
 											
-											<a class="backwards1" onclick="plusSlides(-1)">&#10094;</a>
-											<a class="forwards1" onclick="plusSlides(1)">&#10095;</a>
+											<a class="backwards1" onclick="secondPlusSlides(-1)">&#10094;</a>
+											<a class="forwards1" onclick="secondPlusSlides(1)">&#10095;</a>
 											
 											</div>
 											<br>
 											
 											<div style="text-align:center">
-											  <span class="dot1" onclick="currentSlide(1)"></span> 
-											  <span class="dot1" onclick="currentSlide(2)"></span> 
-											  <span class="dot1" onclick="currentSlide(3)"></span> 
+											  <span class="dot dot2" onclick="secondCurrentSlide(1)"></span> 
+											  <span class="dot dot2" onclick="secondCurrentSlide(2)"></span> 
+                        <span class="dot dot2" onclick="secondCurrentSlide(3)"></span> 
+                        <span class="dot dot2" onclick="secondCurrentSlide(4)"></span> 
+											  <span class="dot dot2" onclick="secondCurrentSlide(5)"></span> 
+											  <span class="dot dot2" onclick="secondCurrentSlide(6)"></span> 
 										</div>
 								</div>
 							</article>
@@ -534,60 +537,61 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 
 			<script>
-				var slideIndex = 1;
-				showSlides(slideIndex);
+				var firstSlideIndex = 1;
+				firstShowSlides(firstSlideIndex);
 				
-				function plusSlides(n) {
-				  showSlides(slideIndex += n);
+				function firstPlusSlides(n) {
+				  firstShowSlides(firstSlideIndex += n);
 				}
 				
-				function currentSlide(n) {
-				  showSlides(slideIndex = n);
+				function firstCurrentSlide(n) {
+				  firstShowSlides(firstSlideIndex = n);
 				}
 				
-				function showSlides(n) {
+				function firstShowSlides(n) {
+          console.log('thing')
 				  var i;
-				  var slides = document.getElementsByClassName("mySlides");
-				  var dots = document.getElementsByClassName("dot");
-				  if (n > slides.length) {slideIndex = 1}    
-				  if (n < 1) {slideIndex = slides.length}
+				  var slides = document.getElementsByClassName("mySlides1");
+				  var dots = document.getElementsByClassName("dot1");
+				  if (n > slides.length) {firstSlideIndex = 1}    
+				  if (n < 1) {firstSlideIndex = slides.length}
 				  for (i = 0; i < slides.length; i++) {
 					  slides[i].style.display = "none";  
 				  }
 				  for (i = 0; i < dots.length; i++) {
 					  dots[i].className = dots[i].className.replace(" activex", "");
 				  }
-				  slides[slideIndex-1].style.display = "block";  
-				  dots[slideIndex-1].className += " activex";
+				  slides[firstSlideIndex-1].style.display = "block";  
+				  dots[firstSlideIndex-1].className += " activex";
 				}
 			</script>
 			
 			<script>
-					var slideIndex = 4;
-					showSlides(slideIndex);
+					var secondSlideIndex = 1;
+					secondShowSlides(secondSlideIndex);
 					
-					function plusSlides(n) {
-					  showSlides(slideIndex += n);
+					function secondPlusSlides(n) {
+					  secondShowSlides(secondSlideIndex += n);
 					}
 					
-					function currentSlide(n) {
-					  showSlides(slideIndex = n);
+					function secondCurrentSlide(n) {
+					  secondShowSlides(secondSlideIndex = n);
 					}
 					
-					function showSlides(n) {
+					function secondShowSlides(n) {
 					  var i;
-					  var slides = document.getElementsByClassName("mySlides");
-					  var dots = document.getElementsByClassName("dot");
-					  if (n > slides.length) {slideIndex = 1}    
-					  if (n < 1) {slideIndex = slides.length}
+					  var slides = document.getElementsByClassName("mySlides2");
+					  var dots = document.getElementsByClassName("dot2");
+					  if (n > slides.length) {secondSlideIndex = 1}    
+					  if (n < 1) {secondSlideIndex = slides.length}
 					  for (i = 0; i < slides.length; i++) {
 						  slides[i].style.display = "none";  
 					  }
 					  for (i = 0; i < dots.length; i++) {
 						  dots[i].className = dots[i].className.replace(" activex", "");
 					  }
-					  slides[slideIndex-1].style.display = "block";  
-					  dots[slideIndex-1].className += " activex";
+					  slides[secondSlideIndex-1].style.display = "block";  
+					  dots[secondSlideIndex-1].className += " activex";
 					}
 				</script>
 
